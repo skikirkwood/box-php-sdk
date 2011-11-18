@@ -721,7 +721,7 @@ class Box_Client_File {
 	 * @return string $url The url link to the download
 	 */
 	public function download_url(Box_Rest_Client $box_net, $version = 0) {
-		$url = $box_net->$base_url.'/'.$box_net->$api_version;
+		$url = $box_net->base_url.'/'.$box_net->api_version;
 		if($version == 0) {
 			// not a specific version download
 			$url .= '/download/'.$box_net->auth_token.'/'.$this->attr('id');
